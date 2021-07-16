@@ -18,10 +18,11 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.conf import settings
 import debug_toolbar
+from store import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('store.urls')),
+    path('store/listing', views.listing),
     path('store/', include('store.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
 
