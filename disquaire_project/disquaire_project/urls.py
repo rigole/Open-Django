@@ -23,6 +23,7 @@ from store import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('store/listing', views.listing),
+    path('store/detail', views.detail),
     path('store/', include('store.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
 
